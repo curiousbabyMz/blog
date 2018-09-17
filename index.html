@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mz blog</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <h3>Mz</h3>
+            <h3>&</h3>
+            <h3>his works</h3>
+        </div>
+        <div class="main">
+            <div class="detail">
+                <div v-for='(i,index) of works' :key='index' class="worksItem" v-show='i.type==targetType'>{{i.name}}</div>
+            </div>
+            <div class="nav">
+                <div class="navItem" @click='nav()'>全部</div>
+                <div v-for='(i,index) of type' :key='index' class="navItem" @click='nav(index)'>{{i.name}}</div>
+            </div>
+        </div>
+        <div class="foot"><a href="https://github.com/curiousbabyMz/project" target="_blank">curiousbabyMz——Github</a></div>
+    </div>
+</body>
+<script src="./index.js"></script>
+
+</html>
