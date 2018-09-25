@@ -26,13 +26,16 @@ body {
 }
 
 .main {
-    margin-left: 100px;
+    /* margin-left: 100px; */
+    position: relative;
     flex: 1;
     display: flex;
-    padding: 0 20px 20px;
+    padding: 0 100px;
 }
 
 .nav {
+    position: absolute;
+    right: 10px;
     width: 100px;
 }
 
@@ -42,18 +45,32 @@ body {
     margin: 30px 0 30px -10px;
 }
 
-.detail {
+.items {
     color: #333;
     flex-grow: 1;
     background: #efefef;
     border-radius: 0 0 10px 10px;
 }
 
-.worksItem {
+.item {
     padding: 50px;
     margin: 30px 80px;
     background: rgba(140, 184, 192, 0.336);
-border-radius: 30px
+    border-radius: 10px;
+    position: relative;
+}
+
+.itemName {
+    font-size: 25px;
+}
+
+.itemCreatetime {
+    text-align: right;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 10px;
+    color: #888;
 }
 
 .foot {
@@ -63,6 +80,15 @@ border-radius: 30px
     justify-content: center;
 }
 
+.routerView {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 60%;
+    background:rgba(141, 144, 145, 0.712);
+}
 
 a,
 a:active,

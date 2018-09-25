@@ -8,7 +8,8 @@
     <title>Mz blog</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="./index.css">
-    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+    <script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.js"></script>
 </head>
 
 <body>
@@ -19,8 +20,15 @@
             <h3>his works</h3>
         </div>
         <div class="main">
-            <div class="detail">
-                <div v-for='(i,index) of works' :key='index' class="worksItem" v-show='i.type==targetType'>{{i.name}}</div>
+            <div class="items">
+                <template v-for='(i,index) of works'>
+                    <router-link to='/Clock'>
+                        <div class="item" v-show='targetType==i.type||targetType==""' :key='index'>
+                            <div class="itemName">{{i.name}}</div>
+                            <div class="itemCreatetime">发布于：{{i.createtime}}</div>
+                        </div>
+                    </router-link>
+                </template>
             </div>
             <div class="nav">
                 <div class="navItem" @click='nav()'>全部</div>
@@ -28,6 +36,9 @@
             </div>
         </div>
         <div class="foot"><a href="https://github.com/curiousbabyMz/project" target="_blank">curiousbabyMz——Github</a></div>
+        <div class="routerView">
+            <router-view></router-view>
+        </div>
     </div>
 </body>
 <script src="./index.js"></script>
