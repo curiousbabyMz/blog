@@ -22,11 +22,8 @@
         <div class="main">
             <div class="items">
                 <template v-for='(i,index) of works'>
-                    <router-link to='/Clock'>
-                        <div class="item" v-show='targetType==i.type||targetType==""' :key='index'>
-                            <div class="itemName">{{i.name}}</div>
-                            <div class="itemCreatetime">发布于：{{i.createtime}}</div>
-                        </div>
+                    <router-link :to='"/"+index'>
+                        <div :key='index' class="item" v-show='targetType==i.type||targetType==""' @click='targetWork=index'>{{i.name}}</div>
                     </router-link>
                 </template>
             </div>
@@ -36,8 +33,9 @@
             </div>
         </div>
         <div class="foot"><a href="https://github.com/curiousbabyMz/project" target="_blank">curiousbabyMz——Github</a></div>
-        <div class="routerView">
+        <div class="routerview" v-if='targetWork!=""'>
             <router-view></router-view>
+            <div class="close" @click='targetWork=""'>×</div>
         </div>
     </div>
 </body>

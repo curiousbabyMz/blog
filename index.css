@@ -1,103 +1,200 @@
-* {
-    margin: 0;
+@media screen and (min-width:420px) {
+    * {
+        margin: 0;
+    }
+    html, body {
+        height: 100%;
+    }
+    body {
+        text-align: center;
+    }
+    .container {
+        color: #fff;
+        background: rgb(54, 57, 59);
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .head {
+        background: rgb(38, 118, 197);
+        line-height: 20px;
+        padding: 30px;
+    }
+    .main {
+        /* margin-left: 100px; */
+        flex: 1;
+        display: flex;
+        padding: 0 30px;
+    }
+    .nav {
+        position: absolute;
+        right: 10px;
+        width: 80px;
+    }
+    .navItem {
+        padding: 10px 20px;
+        background: rgb(19, 85, 82);
+        margin: 30px 0;
+        border-radius: 10px 0 10px 0;
+    }
+    .items {
+        color: #333;
+        flex-grow: 1;
+        background: #efefef;
+        border-radius: 0 0 10px 10px;
+        padding: 0 80px;
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: center; */
+        align-items: stretch;
+        align-content: center
+    }
+    .item {
+        /* padding: 50px; */
+        width: 300px;
+        height: 300px;
+        background: rgba(140, 184, 192, 0.336);
+        border-radius: 10px;
+        margin: 30px;
+        color: rgb(9, 39, 41);
+        font-size: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .foot {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .routerview {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 70%;
+        height: 70%;
+        margin: auto;
+        /* opacity: 0.8; */
+        /* background: rgba(173, 174, 175, 0.719); */
+        /* color: #222; */
+    }
+    .close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    a, a:active, a:hover, a:visited {
+        color: #eee;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #fff;
+    }
 }
 
-html,
-body {
-    height: 100%;
-}
-
-body {
-    text-align: center;
-}
-
-.container {
-    color: #fff;
-    background: rgb(54, 57, 59);
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.head {
-    background: rgb(38, 118, 197);
-    line-height: 20px;
-    padding: 30px;
-}
-
-.main {
-    /* margin-left: 100px; */
-    position: relative;
-    flex: 1;
-    display: flex;
-    padding: 0 100px;
-}
-
-.nav {
-    position: absolute;
-    right: 10px;
-    width: 100px;
-}
-
-.navItem {
-    padding: 10px 20px;
-    background: rgb(19, 85, 82);
-    margin: 30px 0 30px -10px;
-}
-
-.items {
-    color: #333;
-    flex-grow: 1;
-    background: #efefef;
-    border-radius: 0 0 10px 10px;
-}
-
-.item {
-    padding: 50px;
-    margin: 30px 80px;
-    background: rgba(140, 184, 192, 0.336);
-    border-radius: 10px;
-    position: relative;
-}
-
-.itemName {
-    font-size: 25px;
-}
-
-.itemCreatetime {
-    text-align: right;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    font-size: 10px;
-    color: #888;
-}
-
-.foot {
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.routerView {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    height: 60%;
-    background:rgba(141, 144, 145, 0.712);
-}
-
-a,
-a:active,
-a:hover,
-a:visited {
-    color: #eee;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #fff;
+@media screen and (max-width:420px) {
+    * {
+        margin: 0;
+    }
+    html, body {
+        height: 100%;
+    }
+    body {
+        text-align: center;
+    }
+    .container {
+        color: #fff;
+        background: rgb(54, 57, 59);
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .head {
+        background: rgb(38, 118, 197);
+        line-height: 20px;
+        padding: 30px;
+    }
+    .main {
+        /* margin-left: 100px; */
+        flex: 1;
+        display: flex;
+        padding: 0 30px;
+    }
+    .nav {
+        position: absolute;
+        right: 10px;
+        width: 80px;
+    }
+    .navItem {
+        padding: 10px 20px;
+        background: rgb(19, 85, 82);
+        margin: 30px 0;
+        border-radius: 10px 0 10px 0;
+    }
+    .items {
+        color: #333;
+        flex-grow: 1;
+        background: #efefef;
+        border-radius: 0 0 10px 10px;
+        /* padding: 0 80px; */
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: center; */
+        align-items: stretch;
+        align-content: center
+    }
+    .item {
+        /* padding: 50px; */
+        width: 120px;
+        height: 120px;
+        background: rgba(140, 184, 192, 0.336);
+        border-radius: 10px;
+        margin: 15px;
+        color: rgb(9, 39, 41);
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .foot {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .routerview {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 70%;
+        height: 70%;
+        margin: auto;
+        /* opacity: 0.8; */
+        /* background: rgba(173, 174, 175, 0.719); */
+        /* color: #222; */
+    }
+    .close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    a, a:active, a:hover, a:visited {
+        color: #eee;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #fff;
+    }
 }

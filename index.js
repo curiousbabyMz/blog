@@ -1,10 +1,16 @@
 //works
 var works = {
     Jumper: {
-        name: '蹦跶菇(wxGame)',
+        name: '蹦跶菇(wxG)',
         type: 'miniGame',
-        createtime: '2018-04-13',
-        url: ''
+        createtime: '2018-04-03',
+        url: 'https://curiousbabymz.github.io/project/Wechat/MiniGame.jpg'
+    },
+    Production: {
+        name: '产品展示(MiniP)',
+        type: 'miniProgram',
+        createtime: '2018-07-28',
+        url: 'https://curiousbabymz.github.io/project/Wechat/MiniProgram.jpg'
     },
     Snake: {
         name: '贪吃蛇(Ereget)',
@@ -18,12 +24,6 @@ var works = {
         createtime: '2018-09-03',
         url: 'https://curiousbabymz.github.io/project/PB2/'
     },
-    Production: {
-        name: '产品展示小程序(MiniP)',
-        type: 'miniProgram',
-        createtime: '2018-08-31',
-        url: ''
-    },
     Clock: {
         name: '3D时钟模型(threejs)',
         type: 'H5',
@@ -32,7 +32,7 @@ var works = {
     }
 };
 
-//router
+//routes
 var routes = [];
 for (let i in works) {
     routes.push(
@@ -41,20 +41,21 @@ for (let i in works) {
             component: {
                 template: `
                 <div>
-                    ${i}
+                    <iframe 
+                    src='${works[i].url}'
+                    height='${document.getElementsByClassName('routerview')[0].clientHeight}' 
+                    width='${document.getElementsByClassName('routerview')[0].clientWidth}'
+                    ></iframe>
                 </div>
                 `
             }
         }
     )
 }
-console.log(routes);
-
 
 var router = new VueRouter({
-    routes: routes
-})
-
+    routes: routes,
+});
 
 
 
@@ -62,6 +63,7 @@ var app = new Vue({
     el: '.container',
     data: {
         targetType: '',
+        targetWork: '',
         type: {
             miniProgram: {
                 name: '小程序'
@@ -76,8 +78,9 @@ var app = new Vue({
             //     name: '网页'
             // },
         },
-        works: works
+        works: works,
     },
+    router: router,
     methods: {
         nav: function (i) {
             this.targetType = "";
@@ -85,8 +88,5 @@ var app = new Vue({
             console.log(i)
         }
     },
-    router: router,
     created: function () { }
 })
-
-
