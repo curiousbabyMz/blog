@@ -22,7 +22,7 @@ var works = {
     },
     Clock: {
         name: '3D时钟模型(threejs)',
-        type: 'h5',
+        type: 'H5',
         url: 'https://curiousbabymz.github.io/project/three/'
     }
 };
@@ -38,8 +38,8 @@ for (let i in works) {
                 <div>
                     <iframe 
                     src='${works[i].url}'
-                    height='${window.innerHeight}' 
-                    width='${window.innerWidth}'
+                    height='${document.getElementsByClassName('routerview')[0].clientHeight}' 
+                    width='${document.getElementsByClassName('routerview')[0].clientWidth}'
                     ></iframe>
                 </div>
                 `
@@ -83,5 +83,5 @@ var app = new Vue({
             console.log(i)
         }
     },
-    created: function () {}
+    created: function () { }
 })
