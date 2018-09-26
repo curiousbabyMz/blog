@@ -34,7 +34,9 @@
         </div>
         <div class="foot"><a href="https://github.com/curiousbabyMz/project" target="_blank">curiousbabyMz——Github</a></div>
         <div class="routerview" v-if='targetWork!=""'>
-            <router-view></router-view>
+            <div style="position:relative;z-index:0;">
+                <router-view></router-view>
+            </div>
             <div class="close" @click='targetWork=""'>×</div>
         </div>
     </div>

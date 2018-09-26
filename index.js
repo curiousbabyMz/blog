@@ -40,13 +40,14 @@ for (let i in works) {
             path: `/${i}`,
             component: {
                 template: `
-                <div>
                     <iframe 
                     src='${works[i].url}'
-                    height='${document.getElementsByClassName('routerview')[0].clientHeight}' 
-                    width='${document.getElementsByClassName('routerview')[0].clientWidth}'
+                    height='${document.getElementsByClassName('routerview')[0].clientHeight*0.9}' 
+                    width='${document.getElementsByClassName('routerview')[0].clientWidth}' 
+                    seamless 
+                    frameborder="0" 
+                    style='margin-top:100px;'
                     ></iframe>
-                </div>
                 `
             }
         }
