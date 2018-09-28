@@ -11,25 +11,29 @@ var works = {
         name: '产品展示(MiniP)',
         type: 'miniProgram',
         createtime: '2018-07-28',
-        url: 'https://curiousbabymz.github.io/project/Wechat/MiniProgram.jpg'
+        url: 'https://curiousbabymz.github.io/project/Wechat/MiniProgram.jpg',
+        picUrl:'./images/production.png'
     },
     Snake: {
         name: '贪吃蛇(Ereget)',
         type: 'miniGame',
         createtime: '2018-07-28',
-        url: 'https://curiousbabymz.github.io/project/snake/'
+        url: 'https://curiousbabymz.github.io/project/snake/',
+        picUrl:'./images/snake.png'
     },
     PoPo: {
         name: '泡泡消除(cc)',
         type: 'miniGame',
         createtime: '2018-09-03',
-        url: 'https://curiousbabymz.github.io/project/PB2/'
+        url: 'https://curiousbabymz.github.io/project/PB2/',
+        picUrl:'./images/popo.png'
     },
     Clock: {
         name: '3D时钟模型(threejs)',
         type: 'H5',
         createtime: "2018-8-25",
-        url: 'https://curiousbabymz.github.io/project/three/'
+        url: 'https://curiousbabymz.github.io/project/three/',
+        picUrl:'./images/clock.png'
     }
 };
 
@@ -47,7 +51,7 @@ for (let i in works) {
                     width='${document.getElementsByClassName('routerview')[0].clientWidth}' 
                     seamless 
                     frameborder="0" 
-                    style='margin-top:100px;'
+                    style='margin-top:200px;'
                     ></iframe>
                 `
             }

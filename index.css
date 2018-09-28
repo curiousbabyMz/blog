@@ -69,10 +69,10 @@
         border-radius: 10px;
         margin: 30px;
         color: #fff;
-        font-size: 28px;
+        font-size: 20px;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
     }
 
     .foot {

@@ -24,7 +24,7 @@
                 <template v-for='(i,index) of works'>
                     <router-link :to='"/"+index'>
                         <div :key='index' class="item" v-show='targetType==i.type||targetType==""' @click='targetWork=index'
-                            :style="{background:'url('+i.picUrl+') center bottom/100% no-repeat'}">{{i.name}}</div>
+                            :style="{background:'url('+i.picUrl+') center bottom/cover no-repeat'}">{{i.name}}</div>
                     </router-link>
                 </template>
             </div>
