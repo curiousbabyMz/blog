@@ -52,12 +52,12 @@
         flex-grow: 1;
         background: #efefef;
         border-radius: 0 0 10px 10px;
-        padding: 0 80px;
+        padding: 30px 80px;
         display: flex;
         flex-wrap: wrap;
-        /* justify-content: center; */
-        align-items: stretch;
-        align-content: center;
+        justify-content: center;
+        /* align-items: flex-start; */
+        align-content: space-around;
     }
 
     .item {
@@ -88,10 +88,10 @@
         right: 0;
         bottom: 0;
         width: 70%;
-        height: 70%;
+        height: 90%;
         margin: auto;
         /* opacity: 0.8; */
-        /* background: rgba(173, 174, 175, 0.719); */
+        background: rgba(173, 174, 175, 0.61);
         /* color: #222; */
     }
 
