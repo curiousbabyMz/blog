@@ -125,6 +125,7 @@
         .main {
             /* margin: 0 10px; */
             padding: 0;
+            /* background: url() center/cover no-repeat */
         }
         .nav {
             left: 0;

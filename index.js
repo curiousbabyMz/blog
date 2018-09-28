@@ -4,7 +4,8 @@ var works = {
         name: '蹦跶菇(wxG)',
         type: 'miniGame',
         createtime: '2018-04-03',
-        url: 'https://curiousbabymz.github.io/project/Wechat/MiniGame.jpg'
+        url: 'https://curiousbabymz.github.io/project/Wechat/MiniGame.jpg',
+        picUrl: './images/sj.png'
     },
     Production: {
         name: '产品展示(MiniP)',
@@ -42,7 +43,7 @@ for (let i in works) {
                 template: `
                     <iframe 
                     src='${works[i].url}'
-                    height='${document.getElementsByClassName('routerview')[0].clientHeight*0.9}' 
+                    height='${document.getElementsByClassName('routerview')[0].clientHeight * 0.9}' 
                     width='${document.getElementsByClassName('routerview')[0].clientWidth}' 
                     seamless 
                     frameborder="0" 
