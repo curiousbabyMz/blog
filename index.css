@@ -2,7 +2,8 @@
         margin: 0;
     }
 
-    html, body {
+    html,
+    body {
         height: 100%;
     }
 
@@ -104,7 +105,10 @@
         z-index: 2;
     }
 
-    a, a:active, a:hover, a:visited {
+    a,
+    a:active,
+    a:hover,
+    a:visited {
         color: #eee;
         text-decoration: none;
     }
@@ -119,50 +123,57 @@
 
     @media screen and (max-width:480px) {
         .main {
-            padding: 0 50px;
+            /* margin: 0 10px; */
+            padding: 0;
         }
         .nav {
-            right: 10px;
-            width: 60px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 100%;
+            /* height: 40px; */
+            display: flex;
         }
         .navItem {
-            padding: 8px 10px;
-            background: rgb(19, 85, 82);
-            margin: 20px 0;
-            border-radius: 10px 0 10px 0;
+            flex-grow: 1;
+            padding: 10px 0;
+            background: rgba(14, 68, 65, 0.856);
+            margin: 0;
+            border-radius: 0 0 10px 10px;
             font-size: 12px;
+        }
+        .navItemt{
+            background: rgba(42, 46, 46, 0.856);
         }
         .items {
             color: #333;
             flex-grow: 1;
             background: #efefef;
             border-radius: 0 0 10px 10px;
-            padding: 0 10px;
+            padding: 0;
             width: 100%;
-            display: flex;
-            flex-wrap: wrap;
+            display: block;
+            /* flex-wrap: wrap;
             justify-content: center;
-            align-content: flex-start;
+            align-content: flex-start; */
         }
         .item {
-            width: 200px;
-            height: 100px;
-            margin: 10px;
+            width: 100%;
+            height: 300px;
+            margin: 0;
+            border-radius: 0;
             color: rgb(9, 39, 41);
-            font-size: 16px;
+            font-size: 20px;
+            box-shadow: 0 1px 5px 1px #ccc;
         }
         .foot {
-            height: 50px;
+            height: 40px;
         }
         .routerview {
             width: 100%;
             height: 100%;
         }
         .close {
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            font-size: 30px;
-            font-weight: bold;
+            z-index: 2;
         }
     }

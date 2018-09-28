@@ -16,8 +16,8 @@
     <div class="container">
         <div class="head">
             <h1>Mz</h1>
-            <h4>&</h4>
-            <h3>his works</h3>
+            <h5>&</h5>
+            <h4>his works</h4>
         </div>
         <div class="main">
             <div class="items">
@@ -28,8 +28,8 @@
                 </template>
             </div>
             <div class="nav">
-                <div class="navItem" @click='nav()'>全部</div>
-                <div v-for='(i,index) of type' :key='index' class="navItem" @click='nav(index)'>{{i.name}}</div>
+                <div :class='["navItem",{navItemt:targetType==""}]' @click='nav()'>全部</div>
+                <div v-for='(i,index) of type' :key='index' :class="['navItem',{navItemt:index==targetType}]" @click='nav(index)'>{{i.name}}</div>
             </div>
         </div>
         <div class="foot"><a href="https://github.com/curiousbabyMz/project" target="_blank">curiousbabyMz——Github</a></div>
